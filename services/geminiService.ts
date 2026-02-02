@@ -1,8 +1,19 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 
-// Initialize Gemini Client
-const GEMINI_API_KEY = import.meta.env.VITE_API_KEY || "";
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+// Lazy Initialize Gemini Client
+let aiInstance: GoogleGenAI | null = null;
+
+const getAi = () => {
+  if (aiInstance) return aiInstance;
+
+  const key = import.meta.env.VITE_API_KEY;
+  if (!key) {
+    return null;
+  }
+
+  aiInstance = new GoogleGenAI({ apiKey: key });
+  return aiInstance;
+};
 
 // Helper to decode Base64 to ArrayBuffer
 function decode(base64: string): Uint8Array {
@@ -38,6 +49,11 @@ async function decodeAudioData(
 export const generateAdSpeech = async (text: string, voiceName: string): Promise<AudioBuffer | null> => {
   try {
     const prompt = `Fale a seguinte mensagem promocional com entusiasmo e energia de um locutor de rádio profissional: "${text}"`;
+
+    const ai = getAi();
+    if (!ai) {
+      throw new Error("Chave de API do Gemini não configurada (VITE_API_KEY).");
+    }
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash-preview-tts",
