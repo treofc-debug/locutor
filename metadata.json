@@ -1,0 +1,5 @@
+{
+  "name": "PromoCaster AI",
+  "description": "Sistema de automação de áudio para publicidade com locução via IA e ducking automático de música de fundo.",
+  "requestFramePermissions": []
+}
