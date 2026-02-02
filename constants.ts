@@ -32,16 +32,16 @@ export const RADIO_STATIONS: RadioStation[] = [
     genre: 'Flashback / 80s'
   },
   {
-    id: 'acoustic',
-    name: 'Acústico / Café (Free)',
-    url: 'https://stream.zeno.fm/sadhunfmv0uv',
-    genre: 'Acoustic / Relax'
+    id: 'jazz-lounge',
+    name: 'Jazz & Swing (Public Domain)',
+    url: 'https://relay.publicdomainradio.org/jazz_swing.mp3',
+    genre: 'Jazz / Vintage'
   },
   {
-    id: 'jazz-lounge',
-    name: 'Jazz Lounge (Free)',
-    url: 'https://stream.zeno.fm/f964205ay0uv',
-    genre: 'Smooth Jazz'
+    id: 'classical-chill',
+    name: 'Clássica Relax (Public Domain)',
+    url: 'https://relay.publicdomainradio.org/classical.mp3',
+    genre: 'Instrumental / Calmo'
   },
   {
     id: 'off',
