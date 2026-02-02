@@ -32,16 +32,16 @@ export const RADIO_STATIONS: RadioStation[] = [
     genre: 'Flashback / 80s'
   },
   {
-    id: 'jazz-lounge',
-    name: 'Jazz & Swing (Public Domain)',
-    url: 'https://relay.publicdomainradio.org/jazz_swing.mp3',
-    genre: 'Jazz / Vintage'
+    id: 'lofi-hunter',
+    name: 'Lo-Fi Relax (Hunter FM)',
+    url: 'https://live.hunter.fm/lofi_high',
+    genre: 'Lo-Fi / Relax'
   },
   {
-    id: 'classical-chill',
-    name: 'Clássica Relax (Public Domain)',
-    url: 'https://relay.publicdomainradio.org/classical.mp3',
-    genre: 'Instrumental / Calmo'
+    id: 'groove-salad',
+    name: 'Groove Salad (SomaFM)',
+    url: 'https://ice6.somafm.com/groovesalad-128-mp3',
+    genre: 'Ambient / Electronic'
   },
   {
     id: 'off',
