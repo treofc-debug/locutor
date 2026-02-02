@@ -1,7 +1,8 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 
 // Initialize Gemini Client
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+const GEMINI_API_KEY = import.meta.env.VITE_API_KEY || "";
+const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 // Helper to decode Base64 to ArrayBuffer
 function decode(base64: string): Uint8Array {
