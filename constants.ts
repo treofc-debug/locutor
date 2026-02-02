@@ -32,6 +32,18 @@ export const RADIO_STATIONS: RadioStation[] = [
     genre: 'Flashback / 80s'
   },
   {
+    id: 'acoustic',
+    name: 'Acústico / Café (Free)',
+    url: 'https://stream.zeno.fm/sadhunfmv0uv',
+    genre: 'Acoustic / Relax'
+  },
+  {
+    id: 'jazz-lounge',
+    name: 'Jazz Lounge (Free)',
+    url: 'https://stream.zeno.fm/f964205ay0uv',
+    genre: 'Smooth Jazz'
+  },
+  {
     id: 'off',
     name: '🔴 Rádio Desligada (Apenas Anúncios)',
     url: '',
